@@ -1,14 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System.IO;
-using UnityEngine;
 using ProtoBuf;
+#if UNITY_EDITOR
+using UnityEngine;
+#endif
 #region protobufbase
 public class protobufbase
 {
 
 }
 #endregion
+#if UNITY_EDITOR
 #region Vector3Protobuf
 [ProtoContract]
 public class Vector3Protobuf : protobufbase
@@ -74,6 +77,7 @@ public class QuaternionProtobuf : protobufbase
     public float w { get; set; }
 }
 #endregion
+#endif
 #region ProtoBufHelp 
 public static class ProtoBufHelp
 {
